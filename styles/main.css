@@ -1,0 +1,12 @@
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.options {
+  border: red dotted;
+  flex-basis: 49%;
+}

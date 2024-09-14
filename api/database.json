@@ -43,7 +43,7 @@
       "price": 1997
     }
   ],
-  "technologies": [
+  "technologys": [
     {
       "id": 1,
       "package": "Basic Package",
