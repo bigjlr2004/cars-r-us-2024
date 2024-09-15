@@ -43,7 +43,7 @@
       "price": 1997
     }
   ],
-  "technologys": [
+  "technologies": [
     {
       "id": 1,
       "package": "Basic Package",
@@ -87,6 +87,20 @@
       "price": 795.45
     }
   ],
-
-  "orders": []
+  "orders": [
+    {
+      "paintId": "1",
+      "interiorId": "2",
+      "wheelId": "3",
+      "technologyId": "2",
+      "id": 1
+    },
+    {
+      "paintId": "3",
+      "interiorId": "3",
+      "wheelId": "1",
+      "technologyId": "3",
+      "id": 2
+    }
+  ]
 }

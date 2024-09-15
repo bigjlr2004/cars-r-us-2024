@@ -1,5 +1,7 @@
 import { InteriorOptions } from "./InteriorOptions.js";
+import { Orders } from "./Orders.js";
 import { PaintOptions } from "./PaintOptions.js";
+import { SaveSubmission } from "./SaveOrder.js";
 import { TechnologyOptions } from "./TechnologyOptions.js";
 import { WheelOptions } from "./WheelOptions.js";
 
@@ -8,6 +10,8 @@ const render = async () => {
   const wheelHTML = await WheelOptions();
   const technologyHTML = await TechnologyOptions();
   const interiorHTML = await InteriorOptions();
+  const saveCarHTML = await SaveSubmission();
+  const ordersHTML = await Orders();
 
   const container = document.querySelector("#main");
 
@@ -26,7 +30,7 @@ const render = async () => {
              </section>
  
              <section class="choices__styles options">
-                 <h2>Packages</h2>
+                 <h2>Technology</h2>
                  ${technologyHTML}
              </section>
          
@@ -35,6 +39,9 @@ const render = async () => {
                  <h2>Wheels</h2>
                  ${wheelHTML}
              </section>
+         </article>
+         <article>
+                  ${saveCarHTML}
          </article>
  
          <article class="order">
@@ -45,7 +52,7 @@ const render = async () => {
          <article class="customOrders options">
              <h2>Custom Cars R Us Orders</h2>
              <div>
-                 
+                 ${ordersHTML}
              </div>
  
          </article>`;

@@ -1,8 +1,19 @@
+import { setInteriorOption } from "./TransientData.js";
+
 export const InteriorOptions = async () => {
   const response = await fetch("http://localhost:8088/interiors");
   const interiors = await response.json();
 
-  let interiorHTML = `<select id="resource">
+  const changeHandler = (changeEvent) => {
+    if (changeEvent.target.id === "interior") {
+      const chosenOption = changeEvent.target.value;
+      console.log(parseInt(chosenOption));
+      setInteriorOption(chosenOption);
+    }
+  };
+  document.addEventListener("change", changeHandler);
+
+  let interiorHTML = `<select id="interior">
      <option value="0">Select interior resource...</option>`;
 
   const divStringArray = interiors.map((interior) => {
